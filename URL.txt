@@ -1,0 +1,6 @@
+IBM COBOL for Linux on x86
+
+https://www.ibm.com/mx-es/products/cobol-compiler-linux-x86
+
+Install:
+https://www.ibm.com/docs/es/cobol-linux-x86/1.2.0?topic=installation-running-install-utility

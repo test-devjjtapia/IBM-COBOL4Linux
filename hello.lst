@@ -1,0 +1,94 @@
+1PP 5737-L11 IBM COBOL for Linux                     1.2.0                Date 08/17/2025  Time 07:53:00   Page     1               
+0Invocation parameters:
+ ADDR(64)
+0Options in effect:
+  NOADATA                                                                                                                            
+    ADDR(64)                                                                                                                         
+    QUOTE                                                                                                                            
+    ARITH(COMPAT)                                                                                                                    
+    BINARY(NATIVE)                                                                                                                   
+    CALLINT(NODESCRIPTOR)                                                                                                            
+    CHAR(NATIVE)                                                                                                                     
+  NOCICS                                                                                                                             
+    COLLSEQ(BINARY)                                                                                                                  
+  NOCOMPILE(S)                                                                                                                       
+  NOCURRENCY                                                                                                                         
+    DATETIME(1900,40)                                                                                                                
+  NODATEPROC                                                                                                                         
+  NODEFINE                                                                                                                           
+  NODIAGTRUNC                                                                                                                        
+  NODYNAM                                                                                                                            
+  NOEXIT                                                                                                                             
+    FLAG(I,I)                                                                                                                        
+  NOFLAGSTD                                                                                                                          
+    FLOAT(NATIVE)                                                                                                                    
+    LINECOUNT(60)                                                                                                                    
+  NOLIST                                                                                                                             
+    LSTFILE(LOCALE)                                                                                                                  
+  NOMAP                                                                                                                              
+  NOMDECK                                                                                                                            
+    NCOLLSEQ(BINARY)                                                                                                                 
+    NSYMBOL(NATIONAL)                                                                                                                
+  NONUMBER                                                                                                                           
+  NOOPTIMIZE                                                                                                                         
+    PGMNAME(LONGUPPER)                                                                                                               
+    SEPOBJ                                                                                                                           
+    SEQUENCE                                                                                                                         
+  NOSOSI                                                                                                                             
+    SOURCE                                                                                                                           
+    SPACE(1)                                                                                                                         
+    SPILL(512)                                                                                                                       
+  NOSQL                                                                                                                              
+    SRCFORMAT(COMPAT)                                                                                                                
+  NOSSRANGE                                                                                                                          
+    TERM                                                                                                                             
+  NOTEST                                                                                                                             
+  NOTHREAD                                                                                                                           
+    TRUNC(STD)                                                                                                                       
+    UTF16(NATIVE)                                                                                                                    
+  NOVBREF                                                                                                                            
+  NOWSCLEAR                                                                                                                          
+    XREF(FULL)                                                                                                                       
+    YEARWINDOW(1900)                                                                                                                 
+    ZWB                                                                                                                              
+1PP 5737-L11 IBM COBOL for Linux                     1.2.0      HELLO     Date 08/17/2025  Time 07:53:00   Page     2               
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference           
+0  000001                IDENTIFICATION DIVISION.                                                 |                                  
+   000002                PROGRAM-ID.  HELLO.                                                      |                                  
+   000003                AUTHOR.      Javier J. Tapia-2025.                                       |                                  
+   000004                ENVIRONMENT DIVISION.                                                    |                                  
+   000005                DATA DIVISION.                                                           |                                  
+   000006                PROCEDURE DIVISION.                                                      |                                  
+   000007                MAINLINE.                                                                |                                  
+   000008                    DISPLAY 'Hello World!'.                                              |                                  
+   000009                    STOP RUN.                                                            |                                  
+1PP 5737-L11 IBM COBOL for Linux                     1.2.0      HELLO     Date 08/17/2025  Time 07:53:00   Page     3               
+0An "M" preceding a data-name reference indicates that the data-name is modified by this reference.
+  
+  Defined   Cross-reference of data names   References                                                                               
+  
+1PP 5737-L11 IBM COBOL for Linux                     1.2.0      HELLO     Date 08/17/2025  Time 07:53:00   Page     4               
+0Context usage is indicated by the letter preceding a procedure-name reference.
+ These letters and their meanings are:
+     A = ALTER (procedure-name)
+     D = GO TO (procedure-name) DEPENDING ON
+     E = End of range of (PERFORM) through (procedure-name)
+     G = GO TO (procedure-name)
+     P = PERFORM (procedure-name)
+     T = (ALTER) TO PROCEED TO (procedure-name)
+     U = USE FOR DEBUGGING (procedure-name)
+  
+  Defined   Cross-reference of procedures   References                                                                               
+  
+        7   MAINLINE                                                                                                                                                                             
+1PP 5737-L11 IBM COBOL for Linux                     1.2.0      HELLO     Date 08/17/2025  Time 07:53:00   Page     5               
+0 Defined   Cross-reference of programs     References                                                                               
+  
+        2   HELLO                                                                                                                                                                                
+-* Statistics for COBOL program HELLO:
+ *    Source records = 9
+ *    Data Division statements = 0
+ *    Procedure Division statements = 2
+0Locale = es_MX.UTF-8
+0End of compilation 1,  program HELLO,  no statements flagged.
+0Return code 0

@@ -1,0 +1,56 @@
+1 Variables de Entorno – Desarrollo (debug)
+
+*--------- COPIAR DESDE AQUI ---------* 
+# >>> IBM COBOL 1.2.0 (DEV) >>>
+export COBOL_HOME="/opt/ibm/cobol/1.2.0"
+export PATH="$COBOL_HOME/bin:$PATH"
+export LD_LIBRARY_PATH="$COBOL_HOME/lib:${LD_LIBRARY_PATH:-}"
+export NLSPATH="$COBOL_HOME/msg/%L/%N:${NLSPATH:-}"
+export MANPATH="$COBOL_HOME/man:${MANPATH:-}"
+export TMPDIR="${TMPDIR:-/tmp}"
+
+# Idioma
+export LANG="es_MX.UTF-8"
+export LC_ALL="es_MX.UTF-8"
+
+# Programas COBOL dinámicos
+export COBPATH=".:$COBOL_HOME/lib"
+
+# Opciones runtime (desarrollo)
+# CHECK(ON)   -> valida índices y ref-mod
+# TRAP(ON)    -> atrapa excepciones de runtime
+# ERRCOUNT(5) -> limita a 5 advertencias
+export COBRTOPT="CHECK(ON),TRAP(ON),ERRCOUNT(5)"
+# <<< IBM COBOL 1.2.0 (DEV) <<<
+
+2 Variables de Entorno – Producción (ejecución optimizada)
+# >>> IBM COBOL 1.2.0 (PROD) >>>
+export COBOL_HOME="/opt/ibm/cobol/1.2.0"
+export PATH="$COBOL_HOME/bin:$PATH"
+export LD_LIBRARY_PATH="$COBOL_HOME/lib:${LD_LIBRARY_PATH:-}"
+export NLSPATH="$COBOL_HOME/msg/%L/%N:${NLSPATH:-}"
+export MANPATH="$COBOL_HOME/man:${MANPATH:-}"
+export TMPDIR="${TMPDIR:-/tmp}"
+
+# Idioma
+export LANG="es_MX.UTF-8"
+export LC_ALL="es_MX.UTF-8"
+
+# Programas COBOL dinámicos
+export COBPATH=".:$COBOL_HOME/lib"
+
+# Opciones runtime (producción)
+# CHECK(OFF)   -> sin validaciones extra
+# TRAP(OFF)    -> no atrapa señales, más rápido
+# ERRCOUNT(50) -> tolera más advertencias
+export COBRTOPT="CHECK(OFF),TRAP(OFF),ERRCOUNT(50)"
+# <<< IBM COBOL 1.2.0 (PROD) <<<
+*--------- FIN DEL ENTORNO ---------*
+
+3 Uso práctico
+En desarrollo, mantén COBRTOPT="CHECK(ON),TRAP(ON),ERRCOUNT(5)".
+Antes de desplegar en producción, cambia a la sección PROD para optimizar velocidad.
+Si quieres alternar dinámicamente sin editar el archivo, puedes exportar manualmente en la sesión:
+export COBRTOPT="CHECK(OFF),TRAP(OFF),ERRCOUNT(50)"   # PROD
+export COBRTOPT="CHECK(ON),TRAP(ON),ERRCOUNT(5)"      # DEV
+
